@@ -5,10 +5,11 @@
  */
 
 $(document).ready(function() {
-		// Config - Feel free to change these classes to suit your naming conventions
-		var tabClass = 'tab';
-		var tabbedClass = 'tabbed';
-		var defaultTabClass = 'tabbed_default';
+        // Config - Feel free to change these classes to suit your naming conventions
+        var tabClass = 'tab';
+        var tabbedClass = 'tabbed';
+        var defaultTabClass = 'tabbed_default';
+        var activeTabClass = 'tab_active';
 
     var hash = window.location.hash.substring(1); // Get the anchor hash from the url
     var $tabbedSections = $('.'+tabbedClass);
@@ -18,7 +19,7 @@ $(document).ready(function() {
     else
         switchTab($('.'+defaultTabClass).attr('id'));
 
-    $('.'+tabClass+'[href*=#]').click(function(e) {
+    $('.'+tabClass+'[href*=\\#]').on('click', function(e) {
         var $this = $(this);
         var tabName = $this.attr('href').substring(1);
 
@@ -41,10 +42,13 @@ $(document).ready(function() {
      * @param name Name of the tab to switch to
      */
     function switchTab(name) {
-        $tabbedSections.hide(); // Hide all tabs
-        $('#'+ name).show(); // Show selected tab
-        $(this).trigger('tabSwitched');
+        $tabbedSections.hide(); // Hide contents of other tabs
+        $('#'+ name).show(); // Show selected tab content
 
+        $('.'+tabClass).removeClass(activeTabClass); // Remove active class from other tabs
+        $('.'+tabClass+'[href=\\#'+name+']').addClass(activeTabClass); // Add active class to this tab
+
+        $(window).trigger('tabSwitched');
         $(window).trigger('load resize'); // Makes sure to trigger refresh of any js that responds to the window resize event to calculate layout (i.e. columnizer, matchheight)
     }
 });
