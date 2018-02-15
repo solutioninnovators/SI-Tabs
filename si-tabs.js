@@ -5,10 +5,10 @@
  */
 
 $(document).ready(function() {
-        // Config - Feel free to change these classes to suit your naming conventions
-        var tabClass = 'tab';
-        var tabbedClass = 'tabbed';
-        var defaultTabClass = 'tabbed_default';
+		// Config - Feel free to change these classes to suit your naming conventions
+		var tabClass = 'tab';
+		var tabbedClass = 'tabbed';
+		var defaultTabClass = 'tabbed_default';
         var activeTabClass = 'tab_active';
 
     var hash = window.location.hash.substring(1); // Get the anchor hash from the url
