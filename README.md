@@ -17,17 +17,17 @@ SI Tabs is a lightweight, accessible jQuery tab switcher that makes use of progr
 
 JS
 ```javascript
-    $(function() {
-        new SiTabs({
-            // The following options do not need to be declared unless you wish to modify them from the default values:
-            tabClass: 'tab',
-            tabbedClass: 'tabbed',
-            defaultTabClass: 'tabbed_default',
-            activeTabClass: 'tab_active',
-            disabledTabClass: 'tab_disabled',
-            transition: null, // Also accepts: 'slide'
-        });
-    });
+$(function() {
+	new SiTabs({
+	    // The following options do not need to be declared unless you wish to modify them from the default values:
+	    tabClass: 'tab',
+	    tabbedClass: 'tabbed',
+	    defaultTabClass: 'tabbed_default',
+	    activeTabClass: 'tab_active',
+	    disabledTabClass: 'tab_disabled',
+	    transition: null, // Also accepts: 'slide'
+	});
+});
 ```
 
 HTML
