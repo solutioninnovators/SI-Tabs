@@ -10,10 +10,12 @@ SI Tabs is a lightweight, accessible jQuery tab switcher that makes use of progr
 3. Add the "tabbed" class to the corresponding tabbed sections in the body of the page that you wish to show/hide using the tabs. Give each tabbed section a unique ID.
 4. Use the ID of the section you want to point to in the tab link's href, i.e. href="#myTab"
 5. Add the "tabbed_default" class on the section you wish to use as the default tab.
+6. Initialize the module on page ready, as demonstrated below:
 
 
 ## Example usage
 
+JS
 ```javascript
     $(function() {
         var tabs = new SiTabs({
@@ -28,6 +30,7 @@ SI Tabs is a lightweight, accessible jQuery tab switcher that makes use of progr
     });
 ```
 
+HTML
 ```html
 <ul>
 	<li><a class="tab" href="#section1">Tab 1</a></li>
