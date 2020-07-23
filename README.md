@@ -14,13 +14,27 @@ SI Tabs is a lightweight, accessible jQuery tab switcher that makes use of progr
 
 ## Example usage
 
+```javascript
+    $(function() {
+        var tabs = new SiTabs({
+            // The following options do not need to be declared unless you wish to modify them from the default values:
+            tabClass: 'tab',
+            tabbedClass: 'tabbed',
+            defaultTabClass: 'tabbed_default',
+            activeTabClass: 'tab_active',
+            disabledTabClass: 'tab_disabled',
+            transition: null, // Also accepts: 'slide'
+        });
+    });
+```
+
 ```html
 <ul>
 	<li><a class="tab" href="#section1">Tab 1</a></li>
 	<li><a class="tab" href="#section2">Tab 2</a></li>
 </ul>
 
-<section class="tabbed" id="section1">
+<section class="tabbed tabbed_default" id="section1">
 	I am the first tabbed section.
 </section> 
 <section class="tabbed" id="section2">
