@@ -18,7 +18,7 @@ SI Tabs is a lightweight, accessible jQuery tab switcher that makes use of progr
 JS
 ```javascript
     $(function() {
-        var tabs = new SiTabs({
+        new SiTabs({
             // The following options do not need to be declared unless you wish to modify them from the default values:
             tabClass: 'tab',
             tabbedClass: 'tabbed',
